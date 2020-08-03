@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::Store::</title>
+</head>
+<body>
+	<center>
+	<form action="{% url 'update' data.age %} " method="POST">
+		{% csrf_token %}
+		<h1>update data</h1>
+		<input type="text" name="name" value="{{data.name}}"><br>
+	<input type="text" name="coursename" value="{{data.coursename}}"><br>
+	<input type="number" name="age" value="{{data.age}}"><br>
+	<input type="submit" name="store"></form>
+</center>
+</body>
+</html>

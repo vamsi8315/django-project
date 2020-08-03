@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::Store::</title>
+</head>
+<body>
+	<center>
+	<form action="{% url 'store' %}" method="POST">
+		{% csrf_token %}
+		<h1>DATA BASE INSERION</h1>
+		<input type="text" name="name" placeholder="Enter  your name" required><br>
+	<input type="text" name="coursename" placeholder="Enter couse name" required><br>
+	<input type="number" name="age" placeholder="enter your age" required><br>
+	<input type="submit" name="store"></form>
+</center>
+</body>
+</html>

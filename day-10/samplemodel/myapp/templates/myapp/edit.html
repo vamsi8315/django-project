@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Edit Form</title>
+</head>
+<body>
+ <form action="{% url 'edit' data.id %}" method='POST'>
+  {% csrf_token %}
+  {{form.as_p}}
+  }
+<button>Update</button>
+<button>Delete</button>
+</form>
+
+</body>
+</html>

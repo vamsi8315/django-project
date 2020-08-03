@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>My form page</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+<h1>form page</h1>
+<form action="#" method="post">
+	{% csrf_token %}
+	
+<div class="form-group">
+	<label for="email">Email</label>
+	<input type="email" class="form-control" id="email"  placeholder="Enter the email" name="email" required>
+	<label for="pwd">Password</label>
+	<input type="password" checked="form-control" placeholder="Enter Your password" name="pswd" id="pwd"           required>
+
+</div>
+<input type="submit" value="Register" class="btn btn-primary">
+
+	<!--is data in which file to be entered like registration mails and post and get post is used because it hide visible in theess adress bar like password in url!-->	
+</form>
+
+</body>
+</html>

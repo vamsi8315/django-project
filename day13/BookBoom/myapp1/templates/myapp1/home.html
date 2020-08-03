@@ -1,0 +1,54 @@
+{% extends 'myapp1/index.html'%}
+{% block content %}
+<h1>Welcome to home page {{user.username}}</h1>
+
+{% if data %}
+<div class="row">
+ <div class="col-sm-4"></div>
+ <div class="col-sm-4">
+  <div class="card">
+   <div class="card-header">
+    {{data.name}}
+   </div>
+   <div class="card-body">
+    {{data.username}}
+    {{data.email}}
+    {{data.phno}}
+   </div>
+  </div>
+ </div>
+</div>
+{% endif%}
+<head>
+  <style type="text/css">
+    #bookstall1
+    {
+      width: 50%;
+      height: auto;
+
+    }
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}  
+body{
+  background-color: yellow;
+}  
+  </style>
+</head>
+<body bgcolor="blue">
+  
+<img src="https://media.gettyimages.com/photos/rear-view-of-a-woman-standing-at-bookstall-yangon-myanmar-picture-id74900936?s=612x612" class="center" id=" bookstall">
+
+<h1>Here you can save the cover page of Bookstalls</h1>
+<h2>To use the website follow the instructions</h2>
+<ul><li>Add the cover page of the book in add book icon in the nav bar </li>
+<li>So add the book and cost that later you want to buy or remember</li>
+<li>After when you want to see your books but also many books with thier cost,author name this will helpful if you forgotten</li>
+</ul>
+<h1 align="center">Thank you ....for suppouting</h1>
+</body>
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock content%}

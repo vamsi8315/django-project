@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::Display::</title>
+</head>
+<body>
+	<h1>Data from data Base</h1>
+	<table border="2px">
+		<tr>
+			<thread>
+				<th>id</th>
+				<th> name</th>
+				<th> coursename</th>
+				<th>age</th>
+				<th>delete</th>
+				<th>update/edit</th>
+			</thread>
+
+		</tr>
+	 {% for i in info %}
+ <tr>
+ 	<td>{{i.id}}</td>
+
+  <td>{{i.name}}</td>
+  <td>{{i.coursename}}</td>
+  <td>{{i.age}}</td>
+   <td><a href="{% url 'delete' i.name %}">Delete</a></td>
+   <td><a href="{% url 'update' i.age %}">update</a></td>
+ </tr>
+  
+ {% endfor%}
+	</table>
+
+	
+</body>
+</html>
